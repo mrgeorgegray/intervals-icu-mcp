@@ -1,0 +1,47 @@
+{
+  "name": "intervals-icu-mcp",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "main": "dist/server.js",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && tsc-alias && chmod 755 dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "tsx src/server.ts",
+    "inspector": "npx @modelcontextprotocol/inspector@0.15.0 node ./dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier:fix": "prettier --write .",
+    "generate-client": "openapi-ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.15.1",
+    "axios": "^1.10.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "luxon": "^3.7.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@hey-api/openapi-ts": "^0.79.2",
+    "@types/express": "^5.0.3",
+    "@types/luxon": "^3.6.2",
+    "@types/node": "^24.0.15",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.3",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0"
+  }
+}
